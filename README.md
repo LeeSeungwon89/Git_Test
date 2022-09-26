@@ -42,6 +42,11 @@ git checkout 커밋 코드 앞 부분 7자리
 git checkout -
 ```
 
+- 로컬 저장소의 커밋을 원격 저장소에 업로드하기
+```
+git push origin master
+```
+
 - 깃허브 원격 저장소에 연동하기
 ```
 git remote add origin 원격 저장소 주소
