@@ -30,3 +30,25 @@ git commit -m "설명"
 ```
 git log
 ```
+
+- 이전 커밋으로 돌아가기
+```
+git checkout 커밋 코드 앞 부분 7자리
+```
+
+- 최신 커밋으로 돌아가기
+```
+git checkout -
+```
+
+- 깃허브 원격 저장소에 연동하기
+```
+git remote add origin 원격 저장소 주소
+```
+
+- 원격 저장소의 커밋을 로컬 저장소에 복제(clone)하기
+```
+# 원격 저장소 주소 뒤에 ' .'을 붙이면 폴더 안에 있는 파일만 복사합니다.
+# 예를 들면 https://github.com/LeeSeungwon89/Git_Test.git .형태입니다.
+git clone 원격 저장소 주소
+```
