@@ -65,7 +65,7 @@ git remote add origin 원격 저장소 주소
 git clone 원격 저장소 주소
 ```
 
-- 추가 
+- 추가 예정
 
 # 소스트리
 
