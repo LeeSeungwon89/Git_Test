@@ -21,7 +21,7 @@ git config --global user.name "계정명"
 git add 파일명
 ```
 
-- 커밋에 대한 상세설명 추가하기
+- 커밋에 대한 상세설명 추가하여 커밋하기
 ```
 # `m`은 massage의 약자입니다. 
 git commit -m "설명"
