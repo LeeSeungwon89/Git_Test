@@ -215,7 +215,7 @@ git merge 브랜치명
 
 - 깃허브 원격 저장소에 연동합니다.
 ```
-git remote add origin 원격 저장소 주소
+git remote add origin 원격저장소주소
 ```
 
 - 원격 저장소의 커밋을 로컬 저장소에 복제(clone)합니다.
