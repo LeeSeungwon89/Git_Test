@@ -19,8 +19,8 @@ pwd
 
 - 현재 폴더 내 파일 목록을 확인합니다.
 ```
-# `-a` 옵션으로 숨김 파일 
-ls -a
+# `-a` 옵션을 사용하면 숨김 파일까지 확인합니다.
+ls [-a]
 ```
 
 - 홈 폴더로 이동합니다.
@@ -46,6 +46,11 @@ mkdir <폴더명>
 - 화면에 문장을 표시합니다.
 ```
 echo "문장"
+```
+
+- 파일을 생성합니다.
+```
+echo "내용" > 파일명 
 ```
 
 - Git 저장소(워킹트리) 상태를 확인합니다.
@@ -119,7 +124,7 @@ git config --list
 ```
 git config core.editor
 git config --global core.editor
-git config --local core.editor
+git config --system core.editor
 ```
 
 - 현재 사용 중인 유저명을 확인합니다.
@@ -138,7 +143,7 @@ git config --global user.email "메일주소"
 git config --global user.name "계정명"
 ```
 
-## 스테이징 및 커밋하기(수정 중)
+## staging 및 commit하기
 
 - 커밋에 추가할(스테이지에 추가할) 파일을 선택합니다.
 ```
@@ -175,6 +180,8 @@ git checkout 커밋 코드 앞 부분 7자리
 ```
 git checkout -
 ```
+
+## push, pull, fetch, merge, remote, clone하기 
 
 - 로컬 저장소의 커밋을 원격 저장소에 올립니다(push).
 ```
@@ -218,8 +225,15 @@ git remote add origin 원격 저장소 주소
 git clone 원격 저장소 주소
 ```
 
+## staging 취소하기
+
+- 스테이지 영역에 위치한 파일을 스테이지에서 내립니다(언스테이징). 워킹트리 내용은 변경되지 않으며 옵션을 생략하면 모든 변경사항을 스테이지에서 내립니다.
+```
+git reset [파일명] ...
+```
+
 - 추가 예정
 
 # 소스트리
 
-사실 소스트리는 GUI라서 굳이 메모가 필요할까? 사용법이 간단해서 음. 일단 고민해보도록 하겠습니다. 소스트리 설치 방법은 [링크](https://www.youtube.com/watch?v=f2qHHLZr3ME&t=439s)를 참고하시기 바랍니다. 별도의 계정 가입 절차 없이 깃허브 계정만  바로 사용할 수 있습니다.
+소스트리 설치 방법은 [링크](https://www.youtube.com/watch?v=f2qHHLZr3ME&t=439s)를 참고하시기 바랍니다. 별도의 계정 가입 절차 없이 깃허브 계정만 바로 사용할 수 있습니다. 자세한 사용법은 본서를 참고하시기 바랍니다.
