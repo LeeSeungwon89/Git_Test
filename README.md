@@ -115,6 +115,13 @@ git config --system --unset 옵션명 값
 git config --list
 ```
 
+- Git의 기본 에디터를 확인합니다. 기본 에디터를 설정할 때는 Git을 재설치하여 설정하는 편이 좋습니다.
+```
+git config core.editor
+git config --global core.editor
+git config --local core.editor
+```
+
 - 현재 사용 중인 유저명을 확인합니다.
 ```
 git config --global user.name
@@ -131,12 +138,24 @@ git config --global user.email "메일주소"
 git config --global user.name "계정명"
 ```
 
-- 커밋에 추가할 파일을 선택합니다.
+## 스테이징 및 커밋하기(수정 중)
+
+- 커밋에 추가할(스테이지에 추가할) 파일을 선택합니다.
 ```
-git add 파일명
+git add 파일1 파일2 ...
 ```
 
-- 커밋에 대한 상세설명을 추가하여 커밋합니다.
+- 커밋합니다.
+```
+git commit
+```
+
+- `add` 명령을 생략하고 바로 커밋합니다. 변경된 파일과 삭제된 파일을 자동으로 스테이징하고 커밋합니다. 단, `untracked` 파일은 커밋하지 않습니다.
+```
+git commit -a
+```
+
+- 상세설명을 추가하여 커밋합니다.
 ```
 # `m`은 massage의 약자입니다. 
 git commit -m "설명"
@@ -162,9 +181,29 @@ git checkout -
 git push origin master
 ```
 
+- 현재 브랜치에서 새로 생성한 커밋들을 원격 저장소에 올립니다. `-u` 옵션을 설정하면 브랜치의 업스트림을 등록하며 한번 등록한 후에는 `git push`만 입력해도 됩니다.
+```
+git push [-u] 원격저장소별명 브랜치명
+```
+
+- 원격 저장소의 변경사항을 워킹트리에 반영합니다.
+```
+git pull
+```
+
 - 원격 저장소의 커밋을 로컬 저장소에 내려받습니다(pull).
 ```
 git pull origin master
+```
+
+- 원격 저장소의 브랜치와 커밋들을 로컬 저장소와 동기화합니다. 옵션을 생략하면 모든 원격 저장소에서 모든 브랜치를 동기화합니다.
+```
+git fetch [원격저장소별명] [브랜치명]
+```
+
+- 지정한 프랜치의 커밋들을 현재 브랜치 및 워킹트리에 반영합니다.
+```
+git merge 브랜치명
 ```
 
 - 깃허브 원격 저장소에 연동합니다.
