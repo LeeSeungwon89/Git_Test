@@ -65,7 +65,7 @@ git init
 
 ## 옵션 설정하기
 
-- 전역 옵션 내용을 확인합니다.
+- 전역 옵션 내용을 확인합니다. 전역 옵션은 개인 PC에서 많이 사용합니다.
 ```
 git config --global 옵션명
 ```
@@ -80,7 +80,7 @@ git config --global 옵션명 새로운값
 git config --global --unset 옵션명
 ```
 
-- 지역 옵션 내용을 확인합니다.
+- 지역 옵션 내용을 확인합니다. 지역 옵션은 공용 PC를 사용하거나 Git을 잠시 사용할 때 설정합니다.
 ```
 git config --local 옵션명
 ```
@@ -95,7 +95,7 @@ git config --local 옵션명 새로운값
 git config --local --unset 옵션명
 ```
 
-- 시스템 옵션 내용을 확인합니다.
+- 시스템 옵션 내용을 확인합니다. 
 ```
 git config --system 옵션명
 ```
@@ -115,7 +115,15 @@ git config --system --unset 옵션명 값
 git config --list
 ```
 
-## 수정 중
+- 현재 사용 중인 유저명을 확인합니다.
+```
+git config --global user.name
+```
+
+- 현재 사용 중인 유저의 메일 주소를 확인합니다.
+```
+git config --global user.email
+```
 
 - 깃에 계정을 연동합니다.
 ```
