@@ -232,6 +232,12 @@ git log --oneline -n5
    - 72자 단위로 줄을 바꿉니다.
 4. HOW보다 WHAT과 WHY를 명시합니다.
 
+## commit 취소하기
+- 특정 커밋을 취소하고 취소한 커밋을 생성합니다.
+```
+git revert <커밋 코드>
+```
+
 ## push, pull, fetch, merge, remote, clone하기 
 
 - 로컬저장소(master)의 커밋을 원격저장소(origin)에 올립니다(push).
