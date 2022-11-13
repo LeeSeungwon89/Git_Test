@@ -33,7 +33,7 @@ ls [-a]
 
 - 파일 내용을 확인합니다.
 ```
-cat 파일명
+cat [파일명]
 ```
 
 - 홈 폴더로 이동합니다.
@@ -85,47 +85,47 @@ git init
 
 - 전역 옵션 내용을 확인합니다. 전역 옵션은 개인 PC에서 많이 사용합니다.
 ```
-git config --global <옵션명>
+git config --global <옵션>
 ```
 
-- 전역 옵션 값을 새로 설정합니다.
+- 전역옵션 값을 새로 설정합니다.
 ```
-git config --global <옵션명> <새로운값>
-```
-
-- 전역 옵션을 삭제합니다.
-```
-git config --global --unset <옵션명>
+git config --global <옵션> <새로운 값>
 ```
 
-- 지역 옵션 내용을 확인합니다. 지역 옵션은 공용 PC를 사용하거나 Git을 잠시 사용할 때 설정합니다.
+- 전역옵션을 삭제합니다.
 ```
-git config --local <옵션명>
-```
-
-- 지역 옵션 값을 새로 설정합니다.
-```
-git config --local <옵션명> <새로운값>
+git config --global --unset <옵션>
 ```
 
-- 지역 옵션 값을 삭제합니다.
+- 지역옵션 내용을 확인합니다. 지역옵션은 공용 PC를 사용하거나 Git을 잠시 사용할 때 설정합니다.
 ```
-git config --local --unset <옵션명>
-```
-
-- 시스템 옵션 내용을 확인합니다. 
-```
-git config --system <옵션명>
+git config --local <옵션>
 ```
 
-- 시스템 옵션 값을 새로 설정합니다.
+- 지역옵션 값을 새로 설정합니다.
 ```
-git config --system <옵션명> <새로운값>
+git config --local <옵션> <새로운 값>
 ```
 
-- 시스템 옵션 값을 삭제합니다.
+- 지역옵션 값을 삭제합니다.
 ```
-git config --system --unset <옵션명> <값>
+git config --local --unset <옵션>
+```
+
+- 시스템옵션 내용을 확인합니다. 
+```
+git config --system <옵션>
+```
+
+- 시스템옵션 값을 새로 설정합니다.
+```
+git config --system <옵션> <새로운 값>
+```
+
+- 시스템옵션 값을 삭제합니다.
+```
+git config --system --unset <옵션> <값>
 ```
 
 - 현 프로젝트의 모든 옵션을 확인합니다.
@@ -145,7 +145,7 @@ git config --system core.editor
 git config --global user.name
 ```
 
-- 현재 사용 중인 유저의 메일 주소를 확인합니다.
+- 현재 사용 중인 유저의 메일주소를 확인합니다.
 ```
 git config --global user.email
 ```
@@ -234,29 +234,29 @@ git log --oneline -n5
 
 ## push, pull, fetch, merge, remote, clone하기 
 
-- 로컬 저장소의 커밋을 원격 저장소에 올립니다(push).
+- 로컬저장소의 커밋을 원격저장소에 올립니다(push).
 ```
 git push origin master
 ```
 
 - 현재 브랜치에서 새로 생성한 커밋들을 원격 저장소에 올립니다. `-u` 옵션을 설정하면 브랜치의 업스트림을 등록하며 한번 등록한 후에는 `git push`만 입력해도 됩니다.
 ```
-git push [-u] [원격저장소별명] [브랜치명]
+git push [-u] [원격저장소 별명] [브랜치명]
 ```
 
-- 원격 저장소의 변경사항을 워킹트리에 반영합니다.
+- 원격저장소의 변경사항을 워킹트리에 반영합니다.
 ```
 git pull
 ```
 
-- 원격 저장소의 커밋을 로컬 저장소에 내려받습니다(pull).
+- 원격저장소의 커밋을 로컬 저장소에 내려받습니다(pull).
 ```
 git pull origin master
 ```
 
-- 원격 저장소의 브랜치와 커밋들을 로컬 저장소와 동기화합니다. 옵션을 생략하면 모든 원격 저장소에서 모든 브랜치를 동기화합니다.
+- 원격저장소의 브랜치와 커밋들을 로컬저장소와 동기화합니다. 옵션을 생략하면 모든 원격저장소에서 모든 브랜치를 동기화합니다.
 ```
-git fetch [원격저장소별명] [브랜치명]
+git fetch [원격저장소 별명] [브랜치 명]
 ```
 
 - 지정한 프랜치의 커밋들을 현재 브랜치 및 워킹트리에 반영합니다.
@@ -264,16 +264,16 @@ git fetch [원격저장소별명] [브랜치명]
 git merge 브랜치명
 ```
 
-- 깃허브 원격 저장소에 연동합니다.
+- 깃허브 원격저장소에 연동합니다.
 ```
-git remote add origin 원격저장소주소
+git remote add origin <원격저장소 이름>
 ```
 
-- 원격 저장소의 커밋을 로컬 저장소에 복제(clone)합니다.
+- 원격저장소의 커밋을 로컬저장소에 복제(clone)합니다.
 ```
-# 원격 저장소 주소 뒤에 ' .'을 붙이면 폴더 안에 있는 파일만 복사합니다.
+# 원격저장소 주소 뒤에 ' .'을 붙이면 폴더 안에 있는 파일만 복사합니다.
 # 예컨대 https://github.com/LeeSeungwon89/Git_Test.git .형태입니다.
-git clone 원격 저장소 주소
+git clone 원격저장소 주소
 ```
 
 ## staging 취소하기
