@@ -238,6 +238,18 @@ git log --oneline -n5
 git revert <커밋 코드>
 ```
 
+## commit 되돌리기
+- 현재 브랜치를 특정 커밋으로 되돌립니다. 작업 폴더의 내용도 함께 변경됩니다.
+```
+# 커밋 체크섬 대신 `HEAD~` 또는 `HEAD^`을 사용할 수 있습니다.
+# `HEAD~<숫자>`에서 `HEAD~`은 헤드의 부모 커밋, `HEAD~2`는 헤드의 할아버지 커밋을 의미합니다.
+# 즉, `HEAD~<숫자>`는 숫자 n번째 위쪽 조상입니다.
+# `git checkout HEAD~2`를 사용하면 `HEAD`만 옮겨집니다.
+# `HEAD^`은 부모 커밋입니다. `HEAD^2`는 두 번째 부모를 의미합니다.
+# 즉, 병합 커밋처럼 부모가 둘 이상인 커밋에서만 의미가 있습니다.
+git reset --hard <이동할 커밋 체크섬>
+```
+
 ## push, pull, fetch, merge, remote, clone하기 
 
 - 로컬저장소(master)의 커밋을 원격저장소(origin)에 올립니다(push).
