@@ -264,9 +264,14 @@ git fetch [원격저장소 별명] [브랜치 명]
 git merge 브랜치명
 ```
 
-- 깃허브 원격저장소에 연동합니다.
+- 원격저장소에 연동합니다.
 ```
-git remote add origin <원격저장소 이름>
+git remote add origin <원격저장소 주소>
+```
+
+- 원격저장소 목록을 확인합니다.
+```
+git remote -v
 ```
 
 - 원격저장소의 커밋을 로컬저장소에 복제(clone)합니다.
