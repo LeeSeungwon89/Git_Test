@@ -372,7 +372,7 @@ git push <원격저장소 별명> <태그 이름>
 
 ## 버그 처리 시나리오
 - (옵션) 오류가 없는 버전(주로 `Tag`가 있는 커밋)으로 롤백
-- `[master]` 브랜치로부터 `[hotfix]` 브랜치 생성
+- `[master]` 브랜치로부터 `[hotfix]` 브랜치 생성(`git checkout -b hotfix master`)
 - 소스 코드 수정 및 테스트 완료
 - `[master]` 브랜치로 병합(Fast-forward) 및 배포
 - 개발 중인 브랜치에도 병합(충돌 발생 가능성 높음)
